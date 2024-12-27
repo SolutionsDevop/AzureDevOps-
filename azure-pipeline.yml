@@ -1,0 +1,36 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: windows-latest
+  name: "alfason_test"
+
+steps:
+
+#Settings
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.x'
+    installationPath: $(Agent.ToolsDirectory)/dotnet
+
+- script: dotnet --version
+  displayName: 'Check .NET version'
+
+- script: dotnet restore
+  displayName: 'Restore dependencies'
+
+- script: dotnet build --configuration Release --no-restore
+  displayName: 'Build project'
+
+- script: dotnet test --nobuild --verbosity normal
+  displayName: 'Run tests'
+
+task: XplatGeneratePleaseNotes@4
+inputs:
+  outputfile: 
