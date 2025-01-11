@@ -49,3 +49,6 @@ Explanation:
     storageAccountName: The name of the output variable
     string: The type of the output (in this case, a string)
     The value of the output is set to storageAccount.name, which retrieves the name of the deployed storage account.
+Deployment command:
+az deployment group create --resource-group $RESOURCE_GROUP_NAME --template-file /r
+oot/bicep-template/vnet.bicep
