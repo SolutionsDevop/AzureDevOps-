@@ -2,13 +2,15 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-
+# DifOrfhrV4MZvdIERLKKlaQToVZtUl7gloGpAq8ERbAlnmBdVn46JQQJ99BAACAAAAAqjeh1AAASAZDO7Ppr
+# https://dev.azure.com/AlfasonGroup
+# bqW=SxYN1t2I6vZh&l8w%uI!M4tvk2SW
 trigger:
 - main
 
 pool:
   vmImage: windows-latest
-  name: "alfason_test"
+  name: "Default"
 
 steps:
 

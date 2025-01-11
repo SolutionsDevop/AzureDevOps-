@@ -21,7 +21,7 @@
 - step 1
     goto https://marketplace.visualstudio.com/items?itemName=richardfennellBM.BM-VSTS-XplatGenerateReleaseNotes
 - step 2
-    install or download it we the organization does not alrady have it
+    install or download it we the organization does not already have it
 - step 3
     generate the release note put it in a temporary area and copy it into wiki or email it out. This will be automated
 - step 4
